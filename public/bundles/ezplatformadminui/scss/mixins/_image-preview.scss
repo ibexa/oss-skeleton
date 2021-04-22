@@ -1,0 +1,45 @@
+@mixin image-preview() {
+    display: flex;
+
+    .ez-field-preview {
+        &__image-wrapper {
+            flex: 1 1 auto;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+        }
+
+        &__image {
+            max-width: calculateRem(520px);
+            margin-right: calculateRem(32px);
+        }
+
+        &__actions-wrapper {
+            flex: 0 0 calculateRem(40px);
+        }
+
+        &__action {
+            &--preview {
+                border: none;
+                border-radius: 50%;
+                height: 40px;
+                width: 40px;
+                line-height: 40px;
+                cursor: pointer;
+                transition: background 0.3s $ibexa-admin-transition;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                display: block;
+                margin-top: 0;
+                background: $ibexa-color-base-dark;
+
+                &:hover,
+                &:focus {
+                    background: darken($ibexa-color-base-dark, 15%);
+                }
+            }
+        }
+    }
+}

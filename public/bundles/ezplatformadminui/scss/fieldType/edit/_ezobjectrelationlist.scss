@@ -1,0 +1,76 @@
+.ez-field-edit--ezobjectrelation,
+.ez-field-edit--ezobjectrelationlist {
+    .ez-field-edit__error {
+        @include error-under-label();
+    }
+
+    &.is-invalid {
+        .ez-relations__cta {
+            @include area-invalid();
+        }
+    }
+
+    .ez-relations {
+        &__cta {
+            width: 100%;
+            padding: calculateRem(16px) calculateRem(30px);
+            background: $ibexa-color-base-light;
+        }
+
+        &__cta-text,
+        &__helper-text {
+            margin: 0;
+            width: 100%;
+        }
+
+        &__helper-text {
+            font-size: calculateRem(14px);
+        }
+
+        &__cta-btn {
+            margin: calculateRem(32px) 0;
+        }
+
+        &__order-input {
+            width: 6ch;
+            text-align: center;
+        }
+
+        &__table {
+            margin-bottom: 0;
+            word-break: break-all;
+        }
+
+        &__table-header {
+            th {
+                color: $ibexa-color-font;
+                padding: 0 0 calculateRem(25px);
+                border: none;
+            }
+        }
+
+        &__table-actions {
+            width: calculateRem(170px);
+            text-align: right;
+
+            .btn {
+                margin-left: calculateRem(2px);
+                margin-right: 0;
+            }
+        }
+
+        &__item-name {
+            max-width: 25vw;
+        }
+
+        &__hidden-column {
+            display: none;
+        }
+    }
+
+    .btn {
+        .ez-icon {
+            margin-right: calculateRem(4px);
+        }
+    }
+}

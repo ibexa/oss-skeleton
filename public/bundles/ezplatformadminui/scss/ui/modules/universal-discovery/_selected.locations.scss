@@ -1,0 +1,78 @@
+.c-selected-locations {
+    background-color: $ibexa-white;
+    position: fixed;
+    top: calculateRem(65px);
+    right: 0;
+    height: 100%;
+    width: calculateRem(60px);
+    box-shadow: 0 calculateRem(2px) calculateRem(4px) 0 rgba(0, 0, 0, 0.45);
+    z-index: 1;
+    transition: all 0.2s ease-out;
+
+    &__selection-count-label {
+        font-size: calculateRem(13px);
+    }
+
+    &--expanded {
+        transition: all 0.4s ease-in;
+        width: calculateRem(340px);
+        box-shadow: none;
+
+        .c-selected-locations {
+            &__actions-wrapper {
+                display: flex;
+                align-items: center;
+            }
+
+            &__selection-count-label {
+                font-size: calculateRem(16px);
+            }
+
+            &__selection-counter {
+                height: auto;
+                width: calculateRem(185px);
+                flex-direction: row;
+                justify-content: flex-start;
+            }
+        }
+    }
+
+    &__items-wrapper {
+        overflow: auto;
+        max-height: calc(100% - #{calculateRem(60px)});
+    }
+
+    &__actions-wrapper {
+        padding: calculateRem(14px) calculateRem(10px);
+        border-bottom: calculateRem(1px) solid $ibexa-color-base;
+    }
+
+    &__toggle-button,
+    &__confirm-button,
+    &__clear-selection-button {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calculateRem(32px);
+        height: calculateRem(32px);
+        border: none;
+    }
+
+    &__selection-counter {
+        font-size: calculateRem(16px);
+        text-align: center;
+        height: calculateRem(60px);
+        width: calculateRem(60px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__selection-count {
+        font-size: calculateRem(16px);
+        margin-right: calculateRem(4px);
+    }
+}

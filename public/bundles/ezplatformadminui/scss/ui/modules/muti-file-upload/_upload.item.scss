@@ -1,0 +1,107 @@
+.c-upload-list-item {
+    display: flex;
+    background: $ibexa-white;
+    padding: calculateRem(8px) calculateRem(32px);
+
+    &:first-child {
+        margin-top: calculateRem(16px);
+    }
+
+    &__icon-wrapper {
+        flex: 0 0 calculateRem(20px);
+        display: flex;
+    }
+
+    &__meta {
+        padding: 0 calculateRem(16px);
+        line-height: 1.4;
+        max-width: 25vw;
+    }
+
+    &__name {
+        font-size: calculateRem(16px);
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    &__size {
+        color: $ibexa-color-base-dark;
+        font-size: calculateRem(14px);
+    }
+
+    &__info {
+        flex: 1 1 auto;
+    }
+
+    &__message {
+        font-style: italic;
+        font-size: calculateRem(12px);
+
+        &--error {
+            padding-top: calculateRem(3px);
+            color: $ibexa-color-warning-dark;
+            font-weight: bold;
+        }
+
+        &--success {
+            color: $ibexa-color-positive;
+        }
+    }
+
+    &__actions {
+        flex: 1 1 calculateRem(44px);
+        max-width: calculateRem(88px);
+        text-align: right;
+    }
+
+    &__action {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: calculateRem(15px);
+        width: calculateRem(44px);
+        height: calculateRem(44px);
+        cursor: pointer;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &--edit {
+            fill: $ibexa-color-primary;
+            transition: all 0.3s $ibexa-admin-transition;
+            width: calculateRem(20px);
+            height: calculateRem(20px);
+        }
+
+        &--edit:hover,
+        &--edit:focus {
+            fill: $ibexa-color-primary-hover;
+        }
+
+        &--delete {
+            fill: $ibexa-color-danger;
+        }
+
+        &--delete:hover,
+        &--delete:focus {
+            fill: darken($ibexa-color-danger, 15%);
+        }
+
+        &--abort {
+            fill: $ibexa-color-base-dark;
+        }
+
+        &--abort:hover,
+        &--abort:focus {
+            fill: darken($ibexa-color-base-dark, 15%);
+        }
+    }
+
+    .c-progress-bar {
+        max-width: calculateRem(200px);
+        float: right;
+    }
+}

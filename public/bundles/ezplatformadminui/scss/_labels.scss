@@ -1,0 +1,18 @@
+.ez-label {
+    @include label-required();
+    margin-bottom: calculateRem(8px);
+    color: $ibexa-color-font-pale;
+
+    &.checkbox-inline,
+    &.form-check-label {
+        margin-bottom: .0625rem;
+
+        &:after {
+            content: '';
+        }
+    }
+
+    &.form-check-label:not(.checkbox-inline) {
+        font-weight: 400;
+    }
+}

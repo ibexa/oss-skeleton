@@ -1,0 +1,179 @@
+.ez-extra-actions {
+    $block: '.ez-extra-actions';
+    @include container-box-shadow-left;
+
+    background-color: $ibexa-white;
+    padding: calculateRem(16px);
+    width: calculateRem(400px);
+
+    &__action {
+        display: block;
+        background: none;
+        border: 0 none;
+        width: 100%;
+        text-align: left;
+        border-radius: calculateRem(4px);
+        padding: 0 calculateRem(16px);
+        line-height: calculateRem(45px);
+        background: $ibexa-white;
+        color: $ibexa-color-primary;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.2s $ibexa-admin-transition;
+
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: none;
+        }
+
+        &:hover,
+        &:focus {
+            background: $ibexa-color-base;
+        }
+
+        &:active {
+            background: $ibexa-color-primary;
+            color: $ibexa-white;
+        }
+    }
+
+    &__action + &__action {
+        margin-top: calculateRem(8px);
+    }
+
+    &__header {
+        font-size: calculateRem(16px);
+        color: $ibexa-color-primary;
+        margin-bottom: calculateRem(30px);
+        padding: calculateRem(8px) calculateRem(8px) calculateRem(24px);
+        font-weight: bold;
+        border-bottom: calculateRem(1px) solid $ibexa-color-base;
+    }
+
+    &__content {
+        .form-group {
+            margin-bottom: 0;
+        }
+    }
+
+    &--edit-user,
+    &--edit {
+        .form-check {
+            display: block;
+            background: none;
+            border: 0 none;
+            width: 100%;
+            text-align: left;
+            border-radius: calculateRem(4px);
+            padding: 0 calculateRem(16px);
+            line-height: calculateRem(45px);
+            background: $ibexa-white;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s $ibexa-admin-transition;
+            margin-bottom: calculateRem(10px);
+            font-size: calculateRem(15px);
+            box-shadow: 0 calculateRem(2px) calculateRem(4px) 0 rgba($ibexa-black, 0.1);
+
+            &:hover,
+            &:focus {
+                background: $ibexa-color-base;
+                font-weight: 700;
+                text-decoration: none;
+            }
+
+            &:active {
+                background: $ibexa-color-primary;
+                color: $ibexa-white;
+            }
+
+            &-label {
+                display: flex;
+                align-items: center;
+                margin: 0;
+                cursor: pointer;
+            }
+
+            &-input[type='radio'] {
+                display: none;
+            }
+        }
+    }
+
+    &__section-header {
+        margin: 0 calculateRem(8px) calculateRem(12px);
+        color: $ibexa-color-base-dark;
+        font-size: calculateRem(16px);
+    }
+
+    &__section-content {
+        margin-bottom: calculateRem(32px);
+        background: $ibexa-white;
+        font-size: calculateRem(16px);
+
+        select {
+            display: inline-block;
+            width: 100%;
+        }
+    }
+
+    &--create {
+        #{$block}__content {
+            max-height: calc(100% - #{calculateRem(60px)});
+            overflow: auto;
+        }
+
+        #{$block}__section-content--content-type {
+            padding: 0;
+        }
+
+        .form-check {
+            cursor: pointer;
+            transition: all 0.2s $ibexa-admin-transition;
+            margin-bottom: 0;
+            padding-left: 0;
+
+            &:active,
+            &:hover,
+            &:focus {
+                color: $ibexa-color-primary;
+            }
+        }
+
+        .form-check-label {
+            display: block;
+            margin: 0 0 0 calculateRem(42px);
+        }
+
+        .form-check-input[type='radio'] {
+            display: none;
+        }
+
+        .form-group {
+            button.btn {
+                &[type='submit'] {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.ez-extra-actions-container {
+    .ez-extra-actions {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        transform: translate(calc(-100%), 0) scaleX(1);
+        transform-origin: right center;
+        transition: $ibexa-admin-widget-open-transition;
+
+        &--hidden {
+            transform: translate(calc(-100%), 0) scaleX(0);
+            transition: $ibexa-admin-widget-close-transition;
+        }
+    }
+}

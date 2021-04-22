@@ -1,0 +1,16 @@
+.ez-header {
+    .container {
+    	position: relative;
+    }
+
+    &--light {
+        background: $ibexa-white;
+    }
+
+    &--content-edit {
+        padding-top: calculateRem(24px);
+        padding-bottom: calculateRem(24px);
+        background: $ibexa-white;
+        border-bottom: calculateRem(1px) solid $ibexa-color-base;
+    }
+}

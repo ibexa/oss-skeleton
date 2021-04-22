@@ -1,0 +1,46 @@
+.ez-content-view,
+.ez-bookmark-list-view,
+.ez-search-view,
+.ez-trash-list-view,
+.ez-drafts-list-view {
+    .ez-content-container {
+        min-width: 0;
+    }
+
+    .ez-content-tree-container {
+        position: relative;
+        top: calculateRem(8px);
+        flex: 0 0 auto;
+        max-width: 0;
+        background: $ibexa-white;
+        color: inherit;
+        transform: scaleX(0);
+        transform-origin: left;
+
+        &--animate {
+            transition: $ibexa-admin-widget-close-transition;
+
+            &.ez-content-tree-container--expanded {
+                transition: $ibexa-admin-widget-open-transition;
+            }
+        }
+
+        &--expanded {
+            transform-origin: left;
+            transform: scaleX(1);
+            display: initial;
+            max-width: 33vw;
+        }
+
+        &__wrapper {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+        }
+    }
+
+    .ez-view-container {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+}

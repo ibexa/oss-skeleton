@@ -1,0 +1,26 @@
+.ez-field-edit--ezauthor {
+    .ez-data-source__author {
+        padding: calculateRem(16px) calculateRem(16px) calculateRem(20px) calculateRem(16px);
+    }
+
+    .ez-data-source__actions {
+        display: flex;
+
+        button {
+            margin: calculateRem(33px) calculateRem(6px) 0;
+            height: calculateRem(40px);
+            width: calculateRem(40px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+.ez-content-edit {
+    .ez-field-edit--ezauthor {
+        .ez-data-source__author {
+            padding: 0;
+        }
+    }
+}

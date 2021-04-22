@@ -1,0 +1,12 @@
+.ez-field-preview--ezkeyword {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+
+    .ez-keyword__item {
+        @include tag();
+
+        margin: 0 calculateRem(5px) 0 0;
+        padding: calculateRem(6px) calculateRem(8px);
+    }
+}

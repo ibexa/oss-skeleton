@@ -1,0 +1,99 @@
+.ez-custom-tag {
+    max-width: 100%;
+    border: calculateRem(1px) solid $ibexa-color-base-pale;
+    margin: calculateRem(16px) 0;
+    border-radius: $ibexa-border-radius;
+
+    & & {
+        max-width: 100%;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $ibexa-color-base-pale;
+        padding: calculateRem(2px) calculateRem(2px) calculateRem(2px) calculateRem(8px);
+        border-top-left-radius: calculateRem(5px);
+        border-top-right-radius: calculateRem(5px);
+    }
+
+    &__header-label {
+        font-weight: bold;
+    }
+
+    &__header-btns {
+        background-color: $ibexa-white;
+        border: calculateRem(1px) solid $ibexa-color-primary;
+        border-radius: $ibexa-border-radius;
+        display: flex;
+        padding: calculateRem(2px);
+    }
+
+    &__header-btn {
+        display: flex;
+        border-radius: calculateRem(5px);
+        padding: calculateRem(4px);
+
+        .ez-icon {
+            fill: $ibexa-color-primary;
+        }
+    }
+
+    &__icon-wrapper {
+        white-space: initial;
+        display: flex;
+        align-items: center;
+    }
+
+    & > [data-ezelement='ezattributes'],
+    & > [data-ezelement='ezcontent'] {
+        display: none;
+        padding: calculateRem(8px) calculateRem(24px);
+    }
+
+    &--attributes-visible {
+        & > [data-ezelement='ezattributes'] {
+            display: block;
+        }
+
+        & > .ez-custom-tag__header {
+            .ez-custom-tag__header-btn--attributes {
+                background-color: $ibexa-color-primary;
+
+                .ez-icon {
+                    fill: $ibexa-white;
+                }
+            }
+        }
+    }
+
+    &--content-visible {
+        & > [data-ezelement='ezcontent'] {
+            display: inherit;
+        }
+
+        &[data-ezelement='eztemplateinline'] {
+            padding: 0 calculateRem(8px);
+            margin: 0 calculateRem(4px);
+            background-color: $ibexa-color-base-medium;
+            border: none;
+            display: inline-flex;
+            max-width: none;
+
+            & > [data-ezelement='ezcontent'] {
+                padding: 0;
+            }
+        }
+
+        & > .ez-custom-tag__header {
+            .ez-custom-tag__header-btn--content {
+                background-color: $ibexa-color-primary;
+
+                .ez-icon {
+                    fill: $ibexa-white;
+                }
+            }
+        }
+    }
+}

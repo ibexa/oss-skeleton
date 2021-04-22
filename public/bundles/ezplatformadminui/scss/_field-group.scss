@@ -1,0 +1,131 @@
+.ez-view-rawcontentview {
+    margin-bottom: calculateRem(25px);
+    background-color: $ibexa-white;
+
+    .ez-raw-content-title {
+        padding: calculateRem(24px);
+        color: $ibexa-black;
+        align-items: center;
+        border-bottom: calculateRem(1px) solid $ibexa-color-base;
+
+        h2 {
+            margin: 0 calculateRem(10px) 0 0;
+            font-size: calculateRem(16px);
+            font-weight: normal;
+        }
+
+        .form-inline {
+            &.collapsing {
+                -webkit-transition: none;
+                transition: none;
+                display: none;
+            }
+        }
+    }
+}
+
+.ez-fieldgroup {
+    &__name {
+        color: $ibexa-color-font;
+        border-bottom: calculateRem(1px) solid $ibexa-color-base;
+        padding: calculateRem(24px) calculateRem(8px);
+        font-weight: normal;
+        font-size: calculateRem(16px);
+    }
+
+    &__toggler {
+        position: relative;
+        display: block;
+        padding: calculateRem(24px) calculateRem(16px);
+        font-size: calculateRem(16px);
+        color: $ibexa-black;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+            color: $ibexa-color-primary;
+            text-decoration: none;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: calculateRem(33px);
+            left: 0;
+            display: inline-block;
+            width: calculateRem(7px);
+            height: calculateRem(7px);
+            border-right: calculateRem(2px) solid $ibexa-black;
+            border-bottom: calculateRem(2px) solid $ibexa-black;
+            transition: all 0.3s $ibexa-admin-transition;
+            transform: rotate(-135deg);
+        }
+
+        &.collapsed {
+            &:before {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    &__content {
+        padding-left: calculateRem(32px);
+        padding-right: calculateRem(32px);
+    }
+
+    .ez-content-field-name {
+        background-color: $ibexa-white;
+    }
+
+    .ez-content-field {
+        display: flex;
+        border-top: calculateRem(1px) solid $ibexa-color-base;
+
+        .ez-content-field-name {
+            flex: 0 0 calculateRem(160px);
+            background: $ibexa-white;
+            margin-bottom: 0;
+            padding: calculateRem(16px) 0;
+            color: $ibexa-color-base-dark;
+        }
+
+        .ez-content-field-value {
+            width: 100%;
+            padding: calculateRem(16px) calculateRem(24px);
+
+            .ezstring-field {
+                display: inline-block;
+                max-width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+
+    .ez-field-preview {
+        &--ezobjectrelationlist {
+            .table {
+                margin-bottom: 0;
+            }
+        }
+
+        &__meta-title-row {
+            th {
+                font-weight: normal;
+                padding-bottom: calculateRem(24px);
+            }
+        }
+
+        &__meta-value-row {
+            td {
+                padding-bottom: calculateRem(10px);
+            }
+        }
+    }
+
+    .ez-content-field-value {
+        .ezcountry-field {
+            margin-bottom: 0;
+        }
+    }
+}

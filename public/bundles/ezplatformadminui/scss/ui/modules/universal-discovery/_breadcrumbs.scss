@@ -1,0 +1,112 @@
+.c-breadcrumbs {
+    display: flex;
+    align-items: center;
+    padding: calculateRem(12px) calculateRem(16px) calculateRem(14px);
+
+    &__hidden-list-wrapper {
+        margin-right: calculateRem(8px);
+        position: relative;
+    }
+
+    &__hidden-list {
+        display: none;
+
+        &--visible {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1;
+            margin-bottom: 0;
+            padding-left: 0;
+            display: block;
+            list-style: none;
+            background-color: $ibexa-white;
+            box-shadow: 0 calculateRem(4px) calculateRem(6px) 0 rgba(135, 135, 135, 0.35);
+            color: $ibexa-color-primary;
+            padding: calculateRem(16px);
+        }
+    }
+
+    &__hidden-list-item {
+        padding: calculateRem(4px) 0;
+        white-space: nowrap;
+        max-width: calculateRem(500px);
+        text-overflow: ellipsis;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    &__hidden-list-toggler {
+        height: calculateRem(20px);
+        width: calculateRem(26px);
+        border: calculateRem(1px) solid $ibexa-color-base-dark;
+        border-radius: $ibexa-border-radius;
+        display: flex;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+
+        .ez-icon {
+            transform: rotate(90deg);
+            transform-origin: center center;
+            fill: $ibexa-color-base-dark;
+        }
+
+        &--active {
+            background-color: $ibexa-color-base-dark;
+
+            .ez-icon {
+                fill: $ibexa-white;
+            }
+        }
+    }
+
+    &__list-wrapper {
+        width: calc(100% - #{calculateRem(34px)});
+    }
+
+    &__list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    &__list-item-text {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        cursor: pointer;
+        color: $ibexa-color-font;
+    }
+
+    &__list-item {
+        max-width: calc(100% / 3);
+        display: flex;
+        font-size: calculateRem(16px);
+
+        &--last {
+            .c-breadcrumbs__list-item-text {
+                cursor: not-allowed;
+                color: $ibexa-color-font-pale;
+                text-decoration: none;
+
+                &:hover {
+                    color: $ibexa-color-font-pale;
+                }
+            }
+        }
+    }
+
+    &__list-item-text {
+        text-decoration: underline;
+
+        &:hover {
+            color: $ibexa-color-primary;
+        }
+    }
+
+    &__list-item-separator {
+        margin: 0 calculateRem(8px);
+    }
+}

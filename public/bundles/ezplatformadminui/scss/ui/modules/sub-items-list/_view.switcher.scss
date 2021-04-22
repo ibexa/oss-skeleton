@@ -1,0 +1,18 @@
+.c-view-switcher {
+    @include toggler-wrapper();
+
+    &--disabled {
+        cursor: not-allowed;
+        opacity: 0.3;
+    }
+
+    .c-view-switcher-btn {
+        @include toggler-btn();
+
+        width: calculateRem(32px);
+        height: calculateRem(32px);
+        padding: 0;
+        border: none;
+        border-radius: 0;
+    }
+}

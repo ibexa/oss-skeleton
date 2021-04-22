@@ -1,0 +1,78 @@
+.c-content-meta-preview {
+    padding: calculateRem(10px) calculateRem(20px);
+    position: relative;
+    height: 100%;
+
+    &__preview {
+        width: calculateRem(248px);
+        height: calculateRem(248px);
+        margin-bottom: calculateRem(16px);
+        background-color: $ibexa-color-base-light;
+        border-radius: $ibexa-border-radius;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__content-name {
+        font-size: calculateRem(16px);
+        line-height: calculateRem(16px);
+        font-weight: bold;
+    }
+
+    &__details-item {
+        display: flex;
+        font-size: calculateRem(13px);
+        justify-content: space-between;
+        color: $ibexa-color-font;
+        margin-top: calculateRem(4px);
+    }
+
+    &__info {
+        margin-top: calculateRem(20px);
+    }
+
+    &__content-type-name {
+        font-size: calculateRem(16px);
+        color: $ibexa-color-font;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: calculateRem(21px);
+    }
+
+    &__toggle-bookmark-button {
+        border: none;
+        align-self: flex-start;
+    }
+
+    &__translations-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-left: calculateRem(8px);
+    }
+
+    &__translation {
+        text-align: right;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: calculateRem(21px);
+    }
+
+    &__edit-button,
+    &__preview-button {
+        padding: 0 calculateRem(8px);
+        line-height: 0.5;
+    }
+
+    &__edit-button {
+        padding: calculateRem(8px);
+    }
+}

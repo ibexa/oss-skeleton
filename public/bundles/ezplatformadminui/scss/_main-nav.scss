@@ -1,0 +1,59 @@
+.ez-main-nav {
+    flex-wrap: wrap;
+    padding: 0;
+    background-color: $ibexa-white;
+    border-bottom: calculateRem(1px) solid $ibexa-color-border-light;
+
+    > .container-fluid {
+        padding-right: 0;
+    }
+
+    .navbar-brand {
+        max-width: calculateRem(88px);
+        max-height: calculateRem(24px);
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .nav-tabs {
+        background-color: $ibexa-white;
+        border: none;
+
+        .nav-link {
+            margin: 0;
+            padding: calculateRem(17px) calculateRem(24px);
+            color: $ibexa-black;
+            font-size: calculateRem(14px);
+            transition: all 0.3s $ibexa-admin-transition;
+
+            .ez-icon {
+                margin-right: calculateRem(8px);
+            }
+
+            &:hover,
+            &.active {
+                border-bottom-color: transparent;
+                color: $ibexa-color-primary;
+            }
+        }
+    }
+}
+
+.ez-main-sub-nav {
+    padding: 0 calculateRem(16px) 0 calculateRem(103px);
+    background-color: $ibexa-white;
+
+    .navbar-nav {
+        .nav-link {
+            padding: calculateRem(9px) calculateRem(24px);
+            font-size: calculateRem(14px);
+            color: $ibexa-black;
+            text-decoration: none;
+
+            &:hover,
+            &.active {
+                color: $ibexa-color-primary;
+            }
+        }
+    }
+}

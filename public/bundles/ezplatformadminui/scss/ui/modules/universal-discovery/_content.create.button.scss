@@ -1,0 +1,10 @@
+.c-content-create-button {
+    margin-right: calculateRem(10px);
+    
+    & &__btn {
+        margin-right: calculateRem(52px);
+        padding: calculateRem(4px);
+        color: $ibexa-color-primary;
+        text-decoration: none;
+    }
+}
