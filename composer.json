@@ -1,0 +1,7 @@
+{
+  "name": "ibexa/oss-skeleton",
+  "type": "project",
+  "license": "(GPL-2.0-only or proprietary)",
+  "description": "A project package for installing Ibexa Open Source",
+  "require": {}
+}
