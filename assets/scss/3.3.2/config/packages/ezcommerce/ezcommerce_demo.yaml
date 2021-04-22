@@ -1,0 +1,131 @@
+parameters:
+
+    # ERP demo settings
+    siso_erp.de.web_connector.service_location: 'http://ezcommerce-erp.silver-eshop.de?config=ezcommerce-ms-nav'
+    siso_erp.en.web_connector.service_location: 'http://ezcommerce-erp.silver-eshop.de?config=ezcommerce-ms-nav'
+    siso_erp.admin.web_connector.service_location: 'http://ezcommerce-erp.silver-eshop.de?config=ezcommerce-ms-nav'
+
+    # settings for ERP in order to use the right fallback customer numbers for customers without customer no
+    siso_core.template_debitor.customer_numbers:
+        #configuration for the zone
+        EU:
+            #configuration for the country
+            DE:
+                #customer groups possible:
+                #RBV: 10001
+                #more groups
+                #RBV_DVGW: 10002
+                #default if no customer groups available
+                default: 20000
+            #default value for the zone, if no country is specified
+            default: 40000
+        World:
+            default: 20000
+        #default value if no zone is specified
+        default: 20000
+
+
+    # facets for icecat demo products
+    siso_search.default.simple_facet_definitions:
+        download:
+            filter_type: 'single'
+            sort_type: 'alpha'
+            index_field: 'ses_product_ses_is_download_value_b'
+        color:
+            filter_type: 'multi_or'
+            sort_type: 'alpha'
+            index_field: 'ses_product_ses_datamap_ext_product_colour_value_s'
+        power:
+            filter_type: 'multi_or'
+            sort_type: 'alpha'
+            index_field: 'ses_product_ses_datamap_ext_power_value_s'
+        product_type:
+            filter_type: 'single'
+            sort_type: 'alpha'
+            index_field: 'ses_product_ses_datamap_ext_product_type_value_s'
+        coffee_type:
+            filter_type: 'single'
+            sort_type: 'alpha'
+            index_field: 'ses_product_ses_datamap_ext_coffee_input_type_value_s'
+        beans:
+            filter_type: 'single'
+            sort_type: 'alpha'
+            index_field: 'ses_product_ses_datamap_ext_coffee_beans_capacity_value_s'
+        voltage:
+            filter_type: 'single'
+            sort_type: 'alpha'
+            index_field: 'ses_product_ses_datamap_ext_ac_input_voltage_value_s'
+        weight:
+            filter_type: 'single'
+            sort_type: 'alpha'
+            index_field: 'ses_product_ses_datamap_ext_weight_value_s'
+        pressure:
+            filter_type: 'single'
+            sort_type: 'alpha'
+            index_field: 'ses_product_ses_datamap_ext_pump_pressure_value_s'
+
+        price_range:
+            #possible values: single|multi_and|multi_or
+            filter_type: 'single'
+            #possible values: alpha|numeric|manual|range
+            sort_type: 'range'
+            #sort_type_order: 'XS|S|M|L|XL|XXL'
+            index_field: 'ext_ses_price_range_ms'
+            # ONLY VALID FOR THIS FACET
+            index_range_boundries: 0|10|20|50|100
+        manufacturer:
+            filter_type: 'multi_or'
+            sort_type: 'alpha'
+            index_field: 'ses_product_ses_datamap_ses_brand_value_s'
+        style:
+            filter_type: 'multi_or'
+            sort_type: 'alpha'
+            index_field: 'ext_ses_spec_style_s'
+        variant_color:
+            filter_type: 'multi_or'
+            sort_type: 'alpha'
+            index_field: 'ses_variant_color_ms'
+        variant_size:
+            filter_type: 'multi_or'
+            sort_type: 'alpha'
+            index_field: 'ses_variant_size_ms'
+        category:
+            filter_type: 'multi_or'
+            sort_type: 'alpha'
+            index_field: 'location_parent_id_mid'
+            # ONLY VALID FOR THIS FACET
+            location_id_values: true
+        size:
+            filter_type: 'multi_or'
+            sort_type: 'alpha'
+            index_field: 'ext_ses_spec_size_s'
+        availability:
+            filter_type: 'single'
+            sort_type: 'alpha'
+            index_field: 'ses_product_ses_stock_numeric_value_s'
+        discontinued:
+            filter_type: 'single'
+            sort_type: 'alpha'
+            index_field: 'ses_product_ses_discontinued_value_b'
+        brand:
+            filter_type: 'multi_or'
+            sort_type: 'alpha'
+            index_field: 'ext_ses_spec_brand_s'
+        temperature:
+            filter_type: 'multi_or'
+            sort_type: 'alpha'
+            index_field: 'ext_ses_spec_temperature_s'
+
+
+    #which facets will be used per group
+    siso_search.default.used_facets:
+        product_list:
+            common: ['pressure', 'download', 'brand', 'color', 'manufacturer', 'category', 'price_range', 'power', 'product_type', 'coffee_type,beans', 'voltage', 'weight']
+            specifications: ['style', 'size',  'temperature']
+            variants: ['variant_color', 'variant_size']
+        product:
+            common: ['pressure', 'download', 'brand', 'color', 'manufacturer', 'category', 'price_range', 'power', 'product_type', 'coffee_type,beans', 'voltage', 'weight']
+            specifications: ['style', 'size',  'temperature']
+            variants: ['variant_color', 'variant_size']
+
+

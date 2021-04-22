@@ -1,0 +1,27 @@
+parameters:
+    siso_core.default.ses_swiftmailer:
+        mailSender: shop@silversolutions.de
+        mailReceiver: shop@silversolutions.de
+        lostOrderEmailReceiver: shop@silversolutions.de
+        contactMailReceiver: shop@silversolutions.de
+        cancellationMailReceiver: shop@silversolutions.de
+        shopOwnerMailReceiver: shop@silversolutions.de
+    ses_eshop.forms.business.default_contact_recipient: shop@silversolutions.de
+    ses_eshop.order.sales_contact: shop@silversolutions.de
+    ses_eshop.lostorder_email: shop@silversolutions.de
+    siso_paypal_payment.receiver_email: shop@silver.de
+
+    siso_core.siteaccess_group: ezdemo_site_clean_group
+    apache_tika_path: '%kernel.project_dir%/bin/tika-app-1.20.jar'
+
+    # ezcommerce solr
+#    siso_search.solr.host: '%env(SISO_SEARCH_SOLR_HOST)%'
+#    siso_search.solr.port: '%env(SISO_SEARCH_SOLR_PORT)%'
+#    siso_search.solr.core: '%env(SISO_SEARCH_SOLR_CORE)%'
+#    siso_search.solr.path: '%env(SISO_SEARCH_SOLR_PATH)%'
+
+    one_sky_api_key: my-one-sky-key
+    one_sky_secret: my-onesky-password
+
+    ewz_recaptcha_public_key: public_key
+    ewz_recaptcha_private_key: private_key

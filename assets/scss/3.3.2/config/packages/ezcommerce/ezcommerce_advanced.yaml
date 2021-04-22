@@ -1,0 +1,52 @@
+parameters:
+
+    siso_core.default.logo_image: /bundles/silversolutionseshop/img/logo.png
+    siso_core.admin.logo_image: /bundles/silversolutionseshop/img/logo.png
+    siso_core.default.invoice_logo: /bundles/silversolutionseshop/img/invoice_logo.png
+    siso_core.default.email_header: /bundles/silversolutionseshop/img/email-header-advanced.png
+
+
+    siso_core.default.erp_connection: false
+    siso_local_order_management.default.send_order_to_erp: false
+    siso_order_history.default.use_local_documents: true
+
+    # please set in backend configsection using the ERP URL for your ERP
+    siso_erp.default.web_connector.service_location: 'http://mydomain.com/mywebconnector'
+    siso_erp.web_connector.service_location: 'http://mydomain.com/mywebconnector'
+
+nelmio_solarium:
+    endpoints:
+        default:
+            host: '%siso_search.solr.host%'
+            port: '%siso_search.solr.port%'
+            path: '%siso_search.solr.path%'
+            core: '%siso_search.solr.core%'
+            timeout: 30
+        siso_core_admin:
+            host: '%siso_search.solr.host%'
+            port: '%siso_search.solr.port%'
+            path: '%siso_search.solr.path%'
+            core: admin
+            timeout: 30
+        siso_econtent:
+            host: '%siso_search.solr.host%'
+            port: '%siso_search.solr.port%'
+            path: '%siso_search.solr.path%'
+            core: econtent
+            timeout: 30
+        siso_econtent_back:
+            host: '%siso_search.solr.host%'
+            port: '%siso_search.solr.port%'
+            path: '%siso_search.solr.path%'
+            core: econtent_back
+            timeout: 30
+
+    clients:
+        default:
+            endpoints:
+                - default
+        econtent:
+            endpoints:
+                - siso_econtent
+                - siso_econtent_back
+                - siso_core_admin

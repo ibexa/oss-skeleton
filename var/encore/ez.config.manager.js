@@ -1,0 +1,1 @@
+module.exports = [".\/vendor\/ezsystems\/ezplatform-matrix-fieldtype\/src\/bundle\/Resources\/encore\/ez.config.manager.js"];

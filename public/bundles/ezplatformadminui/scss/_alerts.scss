@@ -1,0 +1,58 @@
+.ez-alert {
+    &--info {
+        background: $ibexa-color-base-medium;
+        color: $ibexa-color-font;
+        padding: calculateRem(12px) calculateRem(20px);
+        border: 0;
+        fill: currentColor;
+        vertical-align: middle;
+        border-radius: $ibexa-border-radius;
+
+        .ez-icon {
+            margin-right: calculateRem(12px);
+            fill: $ibexa-color-primary;
+        }
+    }
+
+    &--icon {
+        background-color: $ibexa-white;
+        border-color: $ibexa-white;
+        color: $ibexa-color-font;
+
+        .ez-icon {
+            display: block;
+            float: left;
+            border-radius: 50%;
+            padding: calculateRem(3px);
+            margin-top: calculateRem(5px);
+        }
+
+        &.alert-info {
+            .ez-icon {
+                background-color: $ibexa-color-info;
+            }
+        }
+
+        &.alert-success {
+            .ez-icon {
+                background-color: $ibexa-color-positive;
+            }
+        }
+
+        &.alert-warning {
+            .ez-icon {
+                background-color: $ibexa-color-warning;
+            }
+        }
+
+        &.alert-danger {
+            .ez-icon {
+                background-color: $ibexa-color-danger;
+            }
+        }
+    }
+
+    &__content {
+        margin-left: calculateRem(30px);
+    }
+}

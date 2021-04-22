@@ -1,0 +1,24 @@
+.c-top-menu {
+    display: flex;
+    align-items: center;
+    height: calculateRem(64px);
+
+    &__cancel-btn-wrapper {
+        margin-left: calculateRem(16px);
+        margin-right: calculateRem(36px);
+    }
+
+    &__cancel-btn {
+        border: none;
+    }
+
+    &__title-wrapper {
+        min-width: calculateRem(500px);
+        font-size: calculateRem(16px);
+        font-weight: bold;
+    }
+
+    &__actions-wrapper {
+        display: flex;
+    }
+}

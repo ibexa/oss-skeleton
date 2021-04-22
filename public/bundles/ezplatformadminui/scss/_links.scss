@@ -1,0 +1,23 @@
+.ez-link {
+    text-decoration: underline;
+    transition: all 0.2s $ibexa-admin-transition;
+
+    &:hover {
+        color: $ibexa-color-primary;
+    }
+
+    &--no-hover-color {
+        &:hover {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
+    &--light {
+        color: $ibexa-white;
+    }
+
+    &--dark {
+        color: $ibexa-black;
+    }
+}

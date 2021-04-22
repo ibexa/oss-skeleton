@@ -1,0 +1,31 @@
+.ez-field-preview--ezgmaplocation {
+    display: flex;
+    flex-wrap: wrap;
+
+    .ez-field-preview {
+        &__map-wrapper {
+            width: calculateRem(520px);
+            height: calculateRem(320px);
+            margin-right: calculateRem(32px);
+        }
+
+        &__map-meta-wrapper {
+            overflow: auto;
+        }
+
+        &__map-meta-title {
+            padding-bottom: calculateRem(24px);
+            font-weight: normal;
+        }
+
+        &__map-meta-value-row {
+            td {
+                padding-bottom: calculateRem(12px);
+            }
+        }
+    }
+
+    .ez-gmaplocation__map {
+        height: 100%;
+    }
+}

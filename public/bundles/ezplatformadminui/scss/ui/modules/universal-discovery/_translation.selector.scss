@@ -1,0 +1,48 @@
+.c-translation-selector {
+    @include container-box-shadow-right;
+
+    position: absolute;
+    right: 100%;
+    top: 0;
+    height: 100%;
+    width: calculateRem(360px);
+    background-color: $ibexa-white;
+    transform: scaleX(1);
+    transform-origin: right center;
+    opacity: 1;
+    transition: all 0.4s ease-in;
+    padding: calculateRem(16px);
+
+    &--hidden {
+        transform: scaleX(0);
+        opacity: 0;
+        transition: all 0.2s ease-out;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: calculateRem(4px) calculateRem(8px) calculateRem(24px) calculateRem(8px);
+        margin-bottom: calculateRem(24px);
+        border-bottom: calculateRem(1px) solid $ibexa-color-base;
+    }
+
+    &__title {
+        color: $ibexa-color-primary;
+    }
+
+    &__close-button {
+        padding: calculateRem(8px);
+    }
+
+    &__languages-wrapper {
+        max-height: calc(100% - #{calculateRem(50px)});
+        overflow: auto;
+    }
+
+    &__language {
+        padding: calculateRem(8px);
+        cursor: pointer;
+    }
+}

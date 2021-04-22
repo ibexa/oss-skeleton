@@ -1,0 +1,23 @@
+.ez-field-edit--ezuser {
+    .ez-field-edit__data {
+        background: $ibexa-white;
+
+        .ez-data-source {
+            max-width: 30%;
+        }
+    }
+
+    .ez-data-source {
+        &__input-wrapper {
+            @include checkbox-switcher();
+        }
+
+        &__label:after {
+            display: none;
+        }
+    }
+
+    .ez-field-edit__error {
+        margin-bottom: calculateRem(8px);
+    }
+}

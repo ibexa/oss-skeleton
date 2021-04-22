@@ -1,0 +1,23 @@
+
+# Commerce routes
+
+# This file is auto-generated during the composer install
+silversolutions_eshop:
+    resource: "@SilversolutionsEshopBundle/Resources/config/ses_routing.yml"
+    prefix: /
+
+silversolutions_tools:
+    resource: '@SilversolutionsToolsBundle/Resources/config/routing.yml'
+    prefix: /
+
+silversolutions_translation:
+    resource: '@SilversolutionsTranslationBundle/Resources/config/routing.yml'
+    prefix: /
+
+siso_search:
+    resource: '@SisoSearchBundle/Resources/config/routing.yml'
+    prefix: /
+
+siso_tools:
+    resource: '@SisoToolsBundle/Resources/config/routing.yml'
+    prefix: /

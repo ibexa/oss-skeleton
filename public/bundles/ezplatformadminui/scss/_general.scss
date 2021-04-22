@@ -1,0 +1,192 @@
+html {
+    min-height: 100vh;
+    width: 100%;
+    font-size: $base-font-size;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+a {
+    transition: color 0.3s $ibexa-admin-transition;
+}
+
+button {
+    background: none;
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.ez-scroll-disabled {
+    overflow: hidden;
+}
+
+.ez-main-row {
+    min-height: calc(100vh - #{calculateRem(58px)});
+
+    &--edit {
+        background: $ibexa-white;
+
+        .ez-context-menu {
+            .ez-sticky-container {
+                top: calculateRem(50px);
+            }
+        }
+    }
+}
+
+.ez-standalone-page {
+    .ez-main-row {
+        min-height: 100vh;
+    }
+}
+
+.ez-dashboard .ez-main-row {
+    background-color: $ibexa-color-base-pale;
+}
+
+.btn {
+    white-space: normal;
+    cursor: pointer;
+    transition: opacity 0.3s $ibexa-admin-transition, background 0.3s $ibexa-admin-transition;
+}
+
+.ezrichtext-field {
+    display: inline-block;
+    width: 100%;
+
+    .align-left {
+        float: left;
+    }
+
+    .align-center {
+        text-align: center;
+    }
+
+    .align-right {
+        float: right;
+    }
+
+    blockquote {
+        margin: calculateRem(16px) calculateRem(40px);
+    }
+}
+
+.ez-login-view {
+    .ez-main-container {
+        height: 100vh;
+    }
+}
+
+.ez-checkbox-icon {
+    @include checkbox-icon($ibexa-color-base-dark);
+}
+
+.ez-visually-hidden,
+.ez-visually-hidden[readonly] {
+    height: calculateRem(1px);
+    opacity: 0;
+    position: relative;
+    z-index: 0;
+}
+
+.ez-spin {
+    animation: spin 1.75s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.ez-content-preview {
+    margin: 0 calculateRem(16px);
+
+    .ez-main-container {
+        padding: 0;
+    }
+}
+
+[disabled] {
+    cursor: not-allowed;
+}
+
+select {
+    &.form-control:disabled,
+    &.form-control[disabled] {
+        opacity: 0.3;
+    }
+}
+
+.ez-info-view,
+.ez-content-view,
+.ez-content-type-view,
+.ez-content-type-group-list-view,
+.ez-language-view,
+.ez-language-list-view,
+.ez-link-manager-view,
+.ez-role-view,
+.ez-role-list-view,
+.ez-search-view,
+.ez-section-view,
+.ez-section-list-view,
+.ez-trash-list-view,
+.ez-bookmark-list-view {
+    background-color: $ibexa-color-base-pale;
+}
+
+.ez-sticky-container {
+    position: -webkit-sticky;
+    position: sticky;
+    top: calculateRem(16px);
+    height: 100vh;
+
+    > .btn {
+        .ez-icon {
+            margin-bottom: calculateRem(3px);
+        }
+    }
+}
+
+.ez-dashboard-row {
+    flex-direction: column;
+}
+
+.ez-scrollable-wrapper {
+    max-height: 60vh;
+    overflow: auto;
+}
+
+.ez-prevent-click,
+.ez-prevent-click * {
+    pointer-events: none !important;
+}
+
+.ez-is-tree-resizing {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.ez-container {
+    padding: calculateRem(16px);
+    background: $ibexa-white;
+}
+
+.ez-error-site {
+    .ez-main-container {
+        padding: 0;
+    }
+}

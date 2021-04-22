@@ -1,0 +1,49 @@
+.c-udw-tab {
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        'top-bar top-bar top-bar'
+        'left-sidebar main right-sidebar';
+    grid-template-rows: auto 1fr;
+    grid-template-columns: calculateRem(220px) 1fr calculateRem(285px);
+    transition: all 0.4s ease-in;
+
+    &__top-bar {
+        grid-area: top-bar;
+        background-color: $ibexa-white;
+    }
+
+    &__left-sidebar {
+        grid-area: left-sidebar;
+        background-color: $ibexa-white;
+        position: relative;
+    }
+
+    &__main {
+        grid-area: main;
+        background-color: $ibexa-color-base-light;
+        overflow: auto;
+    }
+
+    &__right-sidebar {
+        grid-area: right-sidebar;
+        background-color: $ibexa-white;
+    }
+}
+
+.m-ud--locations-selected {
+    .c-udw-tab {
+        grid-template-columns: calculateRem(220px) 1fr calculateRem(350px);
+
+        &__right-sidebar {
+            position: relative;
+            padding-right: calculateRem(60px);
+        }
+    }
+}
+
+.m-bookmarks-tab {
+    .c-udw-tab__main {
+        display: flex;
+    }
+}

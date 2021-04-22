@@ -1,0 +1,52 @@
+.ez-field-edit--ezbinaryfile {
+    .ez-field-edit__error {
+        @include error-under-label();
+    }
+
+    &.is-invalid {
+        .ez-data-source {
+            @include area-invalid();
+        }
+    }
+
+    &.ez-field-edit--with-preview {
+        .ez-field-edit-preview {
+            padding-left: 0;
+
+            &__visual {
+                width: auto;
+            }
+
+            &__action--preview {
+                margin-top: 0;
+            }
+
+            &__file-icon {
+                flex: 0 0 calculateRem(32px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &__file-name,
+            &__file-size {
+                display: inline-block;
+                font-size: calculateRem(16px);
+                margin-right: calculateRem(40px);
+            }
+
+            &__file-name {
+                max-width: calculateRem(500px);
+            }
+
+            &__file-size {
+                max-width: calculateRem(150px);
+            }
+        }
+    }
+
+    .ez-data-source {
+        padding: calculateRem(16px) calculateRem(30px);
+        background: $ibexa-color-base-light;
+    }
+}

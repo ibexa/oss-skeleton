@@ -1,0 +1,44 @@
+.m-tree {
+    padding: 0 calculateRem(3px) calculateRem(30px) 0;
+    min-width: calculateRem(250px);
+    width: calculateRem(250px);
+    max-width: 33vw;
+    height: 100%;
+
+    &__resize-handler {
+        width: calculateRem(3px);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: $ibexa-color-base-light;
+        cursor: col-resize;
+    }
+
+    &__scrollable-wrapper {
+        height: 100%;
+        overflow: auto;
+        padding: calculateRem(12px);
+    }
+
+    &__loading-spinner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    &__collapse-all-btn {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        border-top: calculateRem(1px) solid $ibexa-white;
+        height: calculateRem(30px);
+        padding: calculateRem(7px);
+        font-size: calculateRem(11px);
+        text-align: right;
+        color: $ibexa-color-base-dark;
+        cursor: pointer;
+    }
+}

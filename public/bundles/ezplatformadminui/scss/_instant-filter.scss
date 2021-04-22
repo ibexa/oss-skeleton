@@ -1,0 +1,37 @@
+.ez-instant-filter {
+    &__input {
+        display: block;
+        width: 100%;
+    }
+}
+
+.ez-extra-actions--create {
+    .ez-instant-filter {
+        &__group-name {
+            margin: calculateRem(16px) calculateRem(8px) 0;
+            color: $ibexa-color-base-dark;
+        }
+
+        &__group-item {
+            position: relative;
+
+            label {
+                cursor: pointer;
+            }
+
+            .ez-icon {
+                fill: $ibexa-black;
+                position: absolute;
+                top: 0;
+                left: calculateRem(20px);
+                width: calculateRem(16px);
+                height: calculateRem(16px);
+                margin-top: calculateRem(3px);
+            }
+        }
+
+        &__items {
+            padding-top: calculateRem(6px);
+        }
+    }
+}

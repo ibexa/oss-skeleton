@@ -1,0 +1,263 @@
+@import './public/bundles/ezplatformadminui/scss/functions/calculate.rem';
+
+// Ibexa transition function
+$ibexa-admin-transition: cubic-bezier(0.25, 0.8, 0.25, 1);
+$ibexa-admin-widget-open-transition: all 0.3s ease-in;
+$ibexa-admin-widget-close-transition: all 0.3s ease-out;
+
+// Ibexa colors
+$ibexa-white: #fff;
+$ibexa-black: #131c26;
+
+$ibexa-color-primary: #ae1164;
+$ibexa-color-primary-pale: #f3e4e7;
+$ibexa-color-primary-light: #e75476;
+$ibexa-color-deep-black: #222222;
+
+$ibexa-color-base: #e0e0e8;
+$ibexa-color-base-pale: #f5f5f5;
+$ibexa-color-base-light: #f7f7f9;
+$ibexa-color-base-medium: #ececf1;
+$ibexa-color-base-dark: #878b90;
+$ibexa-color-base-deep: #656565;
+$ibexa-color-base-black: #131c26;
+
+$ibexa-color-ground-dark: #004d5d;
+
+$ibexa-color-font: #131c26;
+$ibexa-color-font-light: #fff;
+$ibexa-color-font-pale: #878b90;
+$ibexa-color-font-black: #222222;
+$ibexa-color-border-light: #ecdfd1;
+
+$ibexa-color-info: #47bedb;
+$ibexa-color-positive: #00825c;
+$ibexa-color-warning: #f7d000;
+$ibexa-color-danger: #d92d42;
+$ibexa-color-warning-dark: #aa0000;
+$ibexa-color-warning-pale: #fceaec;
+
+$ibexa-color-primary-hover: #e75476;
+
+/* eZ variables: These variables are deprecated, please use variables with the "ibexa" prefix */
+$ez-admin-transition: $ibexa-admin-transition;
+$ez-admin-widget-open-transition: $ibexa-admin-widget-open-transition;
+$ez-admin-widget-close-transition: $ibexa-admin-widget-close-transition;
+
+$ez-color-primary: $ibexa-color-primary;
+$ez-color-primary-hover: darken($ibexa-color-primary, 15%);
+$ez-color-secondary: $ibexa-color-primary;
+$ez-color-secondary-hover: darken($ez-color-secondary, 15%);
+$ez-color-hyperlink: $ibexa-color-primary;
+$ez-color-hyperlink-hover: darken($ez-color-hyperlink, 15%);
+$ez-color-positive: $ibexa-color-positive;
+$ez-color-warning: $ibexa-color-warning;
+$ez-color-danger: $ibexa-color-danger;
+$ez-color-danger-hover: darken($ibexa-color-danger, 15%);
+
+$ez-white: $ibexa-white;
+$ez-ground-base-pale: $ibexa-color-base-light;
+$ez-ground-base-light: $ibexa-color-base-pale;
+$ez-ground-base: $ibexa-color-base-pale;
+$ez-ground-base-medium: $ibexa-white;
+$ez-ground-base-dark: $ibexa-color-base-light;
+$ez-ground-base-dark-hover: darken($ibexa-color-base-light, 15%);
+$ez-color-base-pale: $ibexa-white;
+$ez-color-base-light: $ibexa-color-base-dark;
+$ez-color-base-light-hover: darken($ibexa-color-base-dark, 15%);
+$ez-color-base-medium: $ibexa-color-base-dark;
+$ez-color-base-medium-hover: darken($ibexa-color-base-dark, 15%);
+$ez-color-base-dark: $ibexa-black;
+$ez-black: $ibexa-black;
+
+$ez-secondary-ground-pale: $ibexa-color-base;
+$ez-ground-primary: $ibexa-white;
+$ez-secondary-ground: $ibexa-color-primary;
+$ez-secondary-ground-medium: $ibexa-color-primary;
+$ez-secondary-ground-dark: $ibexa-color-primary;
+
+$ez-ground-primary-inverted-light: #445a64;
+$ez-ground-primary-inverted: $ibexa-color-base;
+
+$ez-color-warning-pale: $ibexa-color-warning-pale;
+$ez-color-warning-dark: $ibexa-color-warning-dark;
+
+$ez-alloyeditor-color-hover: #65b6f0;
+
+$ez-pagination-bg: transparent;
+$ez-pagination-margin: 0.25rem;
+$ez-pagination-font-size: 1rem;
+$ez-pagination-page-link-radius: 50%;
+$ez-pagination-border-radius: 0.3rem;
+
+/* boostrap variables*/
+$white: $ibexa-white;
+$gray-100: $ibexa-color-base-pale;
+$gray-200: $ibexa-color-base-pale;
+$gray-300: $ibexa-color-base-light;
+$gray-400: $ibexa-color-base-light;
+$gray-500: $ibexa-color-base-medium;
+$gray-600: $ibexa-color-base-medium;
+$gray-700: $ibexa-color-base;
+$gray-800: $ibexa-color-base;
+$gray-900: $ibexa-color-base-dark;
+$black: $ibexa-black;
+
+$grays: (
+    100: $ibexa-color-base-pale,
+    200: $ibexa-color-base-pale,
+    300: $ibexa-color-base-light,
+    400: $ibexa-color-base-light,
+    500: $ibexa-color-base-medium,
+    600: $ibexa-color-base-medium,
+    700: $ibexa-color-base,
+    800: $ibexa-color-base,
+    900: $ibexa-color-base-dark
+);
+
+$blue: $ibexa-color-primary;
+$red: $ibexa-color-primary;
+$orange: $ibexa-color-primary;
+$yellow: $ibexa-color-warning;
+$green: $ibexa-color-positive;
+$teal: $ibexa-white;
+$pink: #e83e8c !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$cyan: #17a2b8 !default;
+
+$colors: (
+    blue: $ibexa-color-primary,
+    red: $ibexa-color-primary,
+    orange: $ibexa-color-primary,
+    yellow: $ibexa-color-warning,
+    green: $ibexa-color-positive,
+    teal: $ibexa-white,
+    white: $ibexa-white,
+    gray: $ibexa-color-base-dark,
+    gray-dark: $pink,
+    indigo: $indigo,
+    purple: $purple,
+    pink: $pink,
+    cyan: $cyan
+);
+
+$theme-colors: (
+    primary: $ibexa-color-primary,
+    secondary: $ibexa-color-base-deep,
+    success: $ibexa-color-positive,
+    warning: $ibexa-color-warning,
+    danger: $ibexa-color-danger,
+    light: $ibexa-color-base-light,
+    dark: $ibexa-color-base-black,
+    info: $cyan
+);
+
+// Typography
+$base-font-size: 16px;
+$small-font-size: 0.8rem !default;
+$h1-font-size: 1.75rem !default;
+$h2-font-size: 1.5rem !default;
+$h3-font-size: 1.375rem !default;
+$h4-font-size: 1.25rem !default;
+$h5-font-size: 1.125rem !default;
+$h6-font-size: 1.0625rem !default;
+
+$headings-font-weight: 700;
+
+// Fonts
+$font-family-sans-serif: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !default;
+
+//Border
+$ibexa-border-radius: calculateRem(2px);
+
+// Tables
+$table-cell-padding: calculateRem(12px) calculateRem(16px);
+$table-bg: $white;
+$table-border-width: 0;
+$table-hover-bg: $ibexa-color-base-pale;
+
+// Breadcrumbs
+$breadcrumb-font-size: calculateRem(14px);
+$breadcrumb-padding-y: 0;
+$breadcrumb-padding-x: 0;
+$breadcrumb-item-padding: calculateRem(8px);
+$breadcrumb-bg: transparent;
+$breadcrumb-divider: quote('>');
+
+// Links
+$link-decoration: underline;
+$link-color: $ibexa-color-font;
+$link-hover-decoration: underline;
+$link-hover-color: $ibexa-color-primary;
+
+// Body
+$body-bg: $ibexa-color-base-light;
+$body-color: $ibexa-black;
+
+// Pagination
+$pagination-color: $ibexa-color-font;
+$pagination-bg: $ibexa-white;
+
+$pagination-padding-y: 0;
+$pagination-padding-x: 0;
+
+$pagination-active-color: $ibexa-color-font;
+$pagination-active-bg: $ibexa-color-base;
+$pagination-active-border-color: transparent;
+
+$pagination-hover-color: $ibexa-color-font;
+$pagination-hover-bg: $ibexa-color-base;
+$pagination-hover-border-width: 0;
+$pagination-hover-border-color: transparent;
+
+$pagination-disabled-color: $ibexa-color-font-pale;
+$pagination-disabled-bg: transparent;
+$pagination-disabled-border-color: transparent;
+
+$pagination-border-width: 0;
+$pagination-border-color: transparent;
+
+// Modals
+$modal-header-padding-y: calculateRem(24px);
+$modal-header-padding-x: 0;
+$modal-header-border-width: calculateRem(1px);
+$modal-header-border-color: $ibexa-color-base-medium;
+$modal-title-font-size: calculateRem(20px);
+$modal-content-border-width: 0;
+$modal-content-border-radius: $ibexa-border-radius;
+$modal-inner-padding: calculateRem(24px) 0;
+$modal-footer-padding: calculateRem(24px) 0;
+$modal-footer-border-width: 0;
+//Components
+$border-radius: $ibexa-border-radius;
+
+//Cards
+$card-spacer-x: 0;
+
+//Grid
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1470px
+) !default;
+
+//Inputs
+$input-bg: transparent;
+$input-color: $ibexa-color-font;
+$input-border-color: $ibexa-color-base-dark;
+$input-box-shadow: none;
+
+$input-focus-bg: transparent;
+$input-focus-border-color: $ibexa-color-primary;
+$input-focus-color: $ibexa-color-font-pale;
+$input-focus-box-shadow: 0 0 calculateRem(2px) 0 rgba($ibexa-color-primary, 0.75);
+
+//Buttons
+$btn-line-height: calculateRem(16px);
+$btn-font-size: calculateRem(15px);
+$btn-padding-y: calculateRem(11px);
+$btn-padding-x: 1rem;
+$btn-border-width: 0;
+$btn-focus-box-shadow: none;

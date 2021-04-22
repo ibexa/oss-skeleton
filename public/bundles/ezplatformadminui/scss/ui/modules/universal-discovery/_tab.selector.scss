@@ -1,0 +1,25 @@
+.c-tab-selector {
+    &__item {
+        min-height: calculateRem(40px);
+        display: flex;
+        align-items: center;
+        padding: calculateRem(12px) calculateRem(16px) calculateRem(12px);
+        cursor: pointer;
+        font-size: calculateRem(16px);
+
+        .ez-icon {
+            margin-right: calculateRem(10px);
+            fill: $ibexa-black;
+        }
+
+        &--selected {
+            background-color: $ibexa-color-base-medium;
+            color: $ibexa-color-primary;
+            font-weight: bold;
+
+            .ez-icon {
+                fill: $ibexa-color-primary;
+            }
+        }
+    }
+}

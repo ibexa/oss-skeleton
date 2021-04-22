@@ -1,0 +1,32 @@
+.ez-tag {
+    border: calculateRem(1px) solid $ibexa-color-base-dark;
+    border-radius: $ibexa-border-radius;
+    background: $ibexa-color-base;
+    padding: calculateRem(8px) calculateRem(48px) calculateRem(8px) calculateRem(8px);
+    display: inline-block;
+    position: relative;
+
+    &__content {
+        line-height: calculateRem(22px);
+    }
+
+    &__spinner {
+        height: calculateRem(22px);
+        line-height: 0;
+    }
+
+    &__remove-btn {
+        position: absolute;
+        top: calc(50% - #{calculateRem(12px)});
+        right: calculateRem(6px);
+        cursor: pointer;
+        border: 0;
+        padding: 0;
+        outline: none;
+        line-height: 0;
+
+        .ez-icon {
+            fill: $ibexa-color-base-black;
+        }
+    }
+}

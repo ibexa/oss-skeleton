@@ -1,0 +1,16 @@
+.ez-field-preview--ezmedia {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    .ez-field-preview {
+        &__media {
+            flex: 1 1 calculateRem(300px);
+            margin-right: calculateRem(32px);
+        }
+
+        &__media-meta {
+            overflow: auto;
+        }
+    }
+}

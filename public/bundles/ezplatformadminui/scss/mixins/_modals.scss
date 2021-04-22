@@ -1,0 +1,64 @@
+@mixin modal-main() {
+    background: $ibexa-white;
+    box-shadow: 0 0 calculateRem(30px) 0 rgba($ibexa-black, 0.35);
+    position: relative;
+    border-radius: $ibexa-border-radius;
+    overflow: hidden;
+}
+
+@mixin modal-content() {
+    padding: 0 calculateRem(24px);
+}
+
+@mixin modal-header() {
+    position: relative;
+    font-size: calculateRem(16px);
+}
+
+@mixin modal-title {
+    margin-right: calculateRem(30px);
+    font-size: $modal-title-font-size;
+    font-weight: 500;
+}
+
+@mixin modal-subtitle {
+    display: inline-block;
+    color: $ibexa-color-font-pale;
+    font-size: calculateRem(14px);
+    font-weight: 400;
+    position: relative;
+    top: calculateRem(-4px);
+    left: calculateRem(1px);
+}
+
+@mixin close-button() {
+    position: absolute;
+    display: block;
+    align-items: center;
+    top: calculateRem(24px);
+    right: 0;
+    cursor: pointer;
+    opacity: 1;
+
+    .ez-icon {
+        width: calculateRem(20px);
+        height: calculateRem(20px);
+        margin: 0;
+        fill: $ibexa-black;
+        opacity: 1;
+    }
+}
+
+@mixin modal-body() {
+    background: $ibexa-white;
+    white-space: normal;
+}
+
+@mixin modal-footer() {
+    justify-content: flex-start;
+    padding: $modal-footer-padding;
+
+    .btn {
+        margin: 0 calculateRem(4px) 0 0;
+    }
+}

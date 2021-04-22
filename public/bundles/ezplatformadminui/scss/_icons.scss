@@ -1,0 +1,161 @@
+.ez-icon {
+    width: calculateRem(32px);
+    height: calculateRem(32px);
+    transition: fill 0.3s $ibexa-admin-transition;
+
+    &--small {
+        width: calculateRem(16px);
+        height: calculateRem(16px);
+    }
+
+    &--small-medium {
+        width: calculateRem(20px);
+        height: calculateRem(20px);
+    }
+
+    &--medium {
+        width: calculateRem(24px);
+        height: calculateRem(24px);
+    }
+
+    &--medium-large {
+        width: calculateRem(38px);
+        height: calculateRem(38px);
+    }
+
+    &--large {
+        width: calculateRem(48px);
+        height: calculateRem(48px);
+    }
+
+    &--extra-large {
+        width: calculateRem(64px);
+        height: calculateRem(64px);
+    }
+
+    &--dark {
+        fill: $ibexa-black;
+    }
+
+    &--light {
+        fill: $ibexa-white;
+    }
+
+    &--base-dark {
+        fill: $ibexa-color-base-dark;
+    }
+
+    &--primary {
+        fill: $ibexa-color-primary;
+    }
+
+    &--secondary {
+        fill: $ibexa-black;
+    }
+}
+
+.btn-icon {
+    .ez-icon {
+        width: calculateRem(20px);
+        height: calculateRem(20px);
+        fill: $ibexa-color-primary;
+
+        &--secondary {
+            fill: $ibexa-black;
+        }
+
+        &--dark {
+            fill: $ibexa-black;
+        }
+
+        &--base-dark {
+            fill: $ibexa-color-base-dark;
+        }
+
+        &--copy {
+            fill: $ibexa-color-base-dark;
+        }
+    }
+
+    &:not([disabled]):hover {
+        .ez-icon {
+            &--secondary {
+                fill: $ibexa-color-primary;
+            }
+        }
+    }
+}
+
+.ez-side-menu,
+.ez-context-menu {
+    .ez-icon {
+        fill: $ibexa-white;
+    }
+}
+
+.ez-btn--extra-actions {
+    .ez-icon {
+        pointer-events: none;
+    }
+}
+
+.ez-icon--logo {
+    width: calculateRem(128px);
+    height: calculateRem(112px);
+    display: block;
+    margin: 0 auto;
+}
+
+.ez-preview__action {
+    .ez-icon {
+        width: calculateRem(24px);
+        height: calculateRem(24px);
+        fill: $ibexa-color-base-dark;
+    }
+
+    &:hover,
+    &:focus {
+        .ez-icon {
+            fill: $ibexa-white;
+        }
+    }
+
+    &.ez-preview__action--selected {
+        .ez-icon {
+            fill: $ibexa-white;
+        }
+    }
+}
+
+.ez-field-edit--ezdate,
+.ez-field-edit--ezdatetime,
+.ez-field-edit--eztime {
+    .ez-data-source__btn--clear-input {
+        .ez-icon {
+            width: calculateRem(16px);
+            height: calculateRem(16px);
+        }
+    }
+}
+
+.ez-btn--select-subtree {
+    .ez-icon {
+        margin-right: calculateRem(8px);
+    }
+}
+
+.ez-alert--info {
+    .ez-icon-warning {
+        fill: $ibexa-color-primary;
+    }
+}
+
+.ez-btn--content-tree-expanded {
+    .ez-icon {
+        fill: $ibexa-black;
+    }
+}
+
+.ez-icon--hidden {
+    display: none;
+}

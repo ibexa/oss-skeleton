@@ -1,0 +1,41 @@
+.ez-dashboard-row {
+    h1 {
+        margin-bottom: 0;
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+}
+
+.ez-content-edit {
+    h2 {
+        &.text-muted {
+            font-size: 1.125rem;
+            color: $ibexa-color-base-dark;
+        }
+    }
+}
+
+.ez-adminsection-edit {
+    padding: 0 calculateRem(8px);
+
+    .card-header {
+        border: none;
+        background-color: $ibexa-white;
+
+        h2 {
+            font-size: calculateRem(16px);
+            font-weight: normal;
+            color: $ibexa-color-primary;
+        }
+    }
+
+    .card-body {
+        h3 {
+            font-size: calculateRem(16px);
+        }
+    }
+}

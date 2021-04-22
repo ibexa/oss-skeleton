@@ -1,0 +1,3 @@
+ezrecommendation_client:
+    resource: "@EzRecommendationClientBundle/Resources/config/routing_rest.yaml"
+    prefix:   '%ezpublish_rest.path_prefix%'

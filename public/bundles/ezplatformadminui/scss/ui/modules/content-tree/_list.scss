@@ -1,0 +1,20 @@
+.c-list {
+    margin: 0;
+    padding: 0 0 0 calculateRem(12px);
+    list-style: none;
+
+    &__no-items-message {
+        padding: calculateRem(10px);
+        font-size: calculateRem(12px);
+        font-style: italic;
+        color: $ibexa-black;;
+    }
+}
+
+.m-tree__scrollable-wrapper {
+    > .c-list {
+        display: table;
+        width: 100%;
+        padding: 0;
+    }
+}

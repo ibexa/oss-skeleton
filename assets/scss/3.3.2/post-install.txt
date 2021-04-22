@@ -1,0 +1,28 @@
+<fg=red>                                                                                              </>
+<fg=red>       ::::     ./.  `..-..`              ``...``               .....`    `....`              </>
+<fg=red>       oo+/   ./++:/++++++++/:.        .:/++//////:.          -////:` `-://///////-`          </>
+<fg=red>       o/.    /++++++/:---:++++/`    `/+++/:----/////-      -////:`  -/////:--::////:`        </>
+<fg=red>          .   /++++:`       ./+++.  .+++/.     .:///:``-` -////:`   ////-`      `-////`       </>
+<fg=red>        ./+   /+++:          `+++/  +++/`    .////:` :///////:`    -///.          .///:       </>
+<fg=red>       /o++   /+++.           :+++``+++:   .////:`   .//////.      :///            ////       </>
+<fg=red>       oo++   -+++:          `+++/  /++/`./+//:`   `-////////:`    -///.          `////       </>
+<fg=red>       oo++    /+++/.       -++++.  .+++++++:`   .:////-``-////:`  `////-        ./////       </>
+<fg=red>       oo++     :+++++::::/++++/`    ./++++/---://///-`    `-////:`  -////:----:///////       </>
+<fg=red>       oo++      `-/++++++++/:.        .:/++//////:.         `-////:` `-://///////-///.       </>
+<fg=red>       ....          `....``              `.....`               `````     `....`   :.         </>
+<fg=red>                                                                                              </>
+
+<fg=red>Thank you for installing Ibexa DXP!</>
+To finish the installation process:
+    1. Configure the database connection via <comment>DATABASE_URL</> in your <comment>.env</> file.
+    2. Run the following commands:
+       >  <comment>composer recipes:install ibexa/experience --force</>
+          <warning>This will overwrite some of the files.</warning> If you modified any of these reject and update manually.
+       >  <comment>php bin/console ibexa:install</>
+       >  <comment>php bin/console ibexa:graphql:generate-schema</>
+       >  <comment>composer run post-update-cmd</>
+
+Refer to https://doc.ibexa.co/en/latest/getting_started/install_ibexa_dxp for a detailed installation and configuration guide.
+<info>To get started working with Ibexa DXP, see First steps: https://doc.ibexa.co/en/latest/getting_started/first_steps.
+For more in-depth information visit the Documentation center: https://developers.ibexa.co/documentation-hub.
+Check out the Ibexa Blog (https://www.ibexa.co/blog) to get updates and insights on working with Ibexa DXP.</>

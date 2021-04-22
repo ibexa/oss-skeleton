@@ -1,0 +1,49 @@
+.c-popup {
+    &__content {
+        @include modal-content();
+    }
+
+    &__header {
+        @include modal-header();
+    }
+
+    &__btn--close {
+        @include close-button();
+    }
+
+    &__body {
+        @include modal-body();
+    }
+
+    &__footer {
+        @include modal-footer();
+    }
+
+    &__headline {
+        max-width: calc(100% - #{calculateRem(56px)});
+    }
+
+    &__title {
+        @include modal-title();
+    }
+
+    &__subtitle {
+        @include modal-subtitle();
+    }
+
+    &--no-header {
+        .c-popup {
+            &__btn--close {
+                @include close-button();
+
+                top: calculateRem(22px);
+                right: calculateRem(18px);
+            }
+
+            &__body {
+                padding-bottom: 0;
+                margin-right: calculateRem(36px);
+            }
+        }
+    }
+}
