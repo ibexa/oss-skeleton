@@ -1,15 +1,21 @@
-# Ibexa Open Source skeleton
+# Ibexa Flex website skeleton
 
-This is a website skeleton for Ibexa Open Source.
+This is a Symfony Flex website skeleton allowing installation of all editions of
+[Ibexa DXP](https://www.ibexa.co/products) and Ibexa Open Source.
 
 ## Installation
 
-Create a new project using composer:
-    ```
-    composer create-project ibexa/oss-skeleton ibexa_website
-    ```
+For installation instructions of Ibexa DXP see either
+[the official documentation](https://doc.ibexa.co/) or packages for specific editions:
+* [Ibexa Content](https://github.com/ibexa/content)
+* [Ibexa Experience](https://github.com/ibexa/experience)
+* [Ibexa Commerce](https://github.com/ibexa/commerce)
 
-Learn more about our commercial products - [Ibexa DXP](https://www.ibexa.co/products).
+Ibexa DXP is licensed under Ibexa Business Use License Agreement (Ibexa BUL) and requires
+a subscription. Learn more about [Ibexa DXP](https://www.ibexa.co/products).
+
+For installation instructions of Ibexa Open Source see [ibexa/oss](https://github.com/ibexa/oss)
+package.
 
 ## COPYRIGHT
 Copyright (C) 1999-2021 Ibexa AS (formerly eZ Systems AS). All rights reserved.
@@ -28,4 +34,5 @@ AND
 
 B - GNU General Public License, version 2
 Grants an copyleft open source license with ABSOLUTELY NO WARRANTY. For the full GPL license text, please see:
-https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+- LICENSE file placed in the root of this source code, or
+- https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
