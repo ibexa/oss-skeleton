@@ -1,0 +1,2 @@
+ezplatform_query_field_type:
+    resource: '@IbexaFieldTypeQueryBundle/Resources/config/routing/rest.yaml'

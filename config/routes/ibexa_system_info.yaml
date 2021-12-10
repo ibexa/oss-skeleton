@@ -1,0 +1,2 @@
+ezplatform_support_tools:
+  resource: '@IbexaSystemInfoBundle/Resources/config/routing.yaml'
