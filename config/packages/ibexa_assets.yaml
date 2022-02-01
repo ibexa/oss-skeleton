@@ -1,0 +1,11 @@
+webpack_encore:
+    builds:
+        ibexa: "%kernel.project_dir%/public/assets/ibexa/build"
+        richtext: "%kernel.project_dir%/public/assets/richtext/build"
+
+framework:
+    assets:
+        json_manifest_path: ~
+        packages:
+            ibexa:
+                json_manifest_path: '%kernel.project_dir%/public/assets/ibexa/build/manifest.json'
