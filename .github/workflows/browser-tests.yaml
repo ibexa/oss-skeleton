@@ -1,0 +1,22 @@
+name: Browser tests
+
+on:
+    push:
+        tags:
+            - 'v*'
+
+jobs:
+    trigger-browser-tests:
+        name: Browser tests
+        runs-on: ubuntu-latest
+        steps:
+          - uses: octokit/request-action@v2.x
+            name: Trigger browser tests
+            with:
+                repository: ibexa/oss
+                workflow: "browser-tests.yml"
+                ref: ${{ github.ref_name }}
+                route: POST /repos/{repository}/actions/workflows/{workflow}/dispatches
+                inputs: '{ "send-success-notification": "true", "project-version": "${{ github.ref_name }}" }'
+            env:
+                GITHUB_TOKEN: ${{ secrets.TRAVIS_GITHUB_TOKEN }}
