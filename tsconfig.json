@@ -1,0 +1,33 @@
+{
+    "extends": "@ibexa/ts-config",
+    "include": [
+        "vendor/ibexa/**/*"
+    ],
+    "exclude": [
+        "vendor/ibexa/**/node_modules/**/*",
+        "vendor/ibexa/**/vendors/**/*",
+        "vendor/ibexa/**/vendor/**/*"
+    ],
+    "compilerOptions": {
+        "paths": {
+            "@ibexa-admin-ui-assets/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_OSS/ibexa-oss/vendor/ibexa/admin-ui-assets/*"
+            ],
+            "@ibexa-admin-ui-helpers/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_OSS/ibexa-oss/vendor/ibexa/admin-ui/src/bundle/Resources/public/js/scripts/helpers/*"
+            ],
+            "@ibexa-admin-ui-modules/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_OSS/ibexa-oss/vendor/ibexa/admin-ui/src/bundle/ui-dev/src/modules/*"
+            ],
+            "@ibexa-admin-ui/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_OSS/ibexa-oss/vendor/ibexa/admin-ui/*"
+            ],
+            "@ids-assets/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_OSS/ibexa-oss/vendor/ibexa/admin-ui-assets/src/bundle/Resources/public/vendors/ids-assets/dist/*"
+            ],
+            "@ids-components/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_OSS/ibexa-oss/vendor/ibexa/admin-ui-assets/src/bundle/Resources/public/vendors/ids-components/dist/*"
+            ]
+        }
+    }
+}
