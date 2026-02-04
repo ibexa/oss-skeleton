@@ -10,6 +10,13 @@ jobs:
         name: Browser tests
         runs-on: ubuntu-latest
         steps:
+          - uses: actions/create-github-app-token@v2
+            name: Generate token
+            id: generate_token
+            with:
+                app-id: ${{ secrets.AUTOMATION_CLIENT_ID }}
+                private-key: ${{ secrets.AUTOMATION_CLIENT_SECRET }}
+                owner: ${{ github.repository_owner }}
           - uses: octokit/request-action@v2.x
             name: Trigger browser tests
             with:
@@ -19,4 +26,4 @@ jobs:
                 route: POST /repos/{repository}/actions/workflows/{workflow}/dispatches
                 inputs: '{ "send-success-notification": "true", "project-version": "${{ github.ref_name }}" }'
             env:
-                GITHUB_TOKEN: ${{ secrets.TRAVIS_GITHUB_TOKEN }}
+                GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
